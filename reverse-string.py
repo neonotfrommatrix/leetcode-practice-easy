@@ -37,11 +37,11 @@ class Solution:
         right = len(s) - 1
         
         while left < right:
-            s[left] = s[right]
-            s[right] = s[left]
             
-            left = right+1
-            right = left-1
+            s[left], s[right] = s[right], s[left] 
+
+            left = left + 1
+            right = right - 1 # Pay attention to where your pointers are
         
         """
         we set the first index to left side of string and the right side to last index.
